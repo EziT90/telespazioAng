@@ -225,7 +225,7 @@
           <clipPath id="a"><path fill="#fff" d="M0 0h982v239H0z" /></clipPath>
         </defs>
       </svg>
-      <h1>Test Pratico 2: {{ title }}</h1>
+      <h1><app-header-component [scope]="scope" [header]="headerTitle"></app-header-component></h1>
     </div>
   </div>
 </main>
@@ -237,6 +237,11 @@
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 <!-- * * * * * * * * * * End of Placeholder  * * * * * * * * * * * * -->
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-
+<div class="row">
+  <app-grid-component></app-grid-component>
+</div>
+<div class="row">
+  <app-footer-component></app-footer-component>
+</div>
 
 <router-outlet />
