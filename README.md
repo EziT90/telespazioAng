@@ -25,3 +25,11 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+## SPECIFICHE DETTATE
+
+TRACCIA 2
+
+"Realizzare uno (o più) componente/i Angular comprensivo/i di html e css per visualizzare una pagina con un semplice header, un footer e una tabella a dimenzione dinamica con richiesta dati paginati e delle colonne con pulsante di ordinamento. Ogni riga dovrà avere una o più azioni che fanno comparire un semplice popup con un messaggio."
+I dati dovranno essere recuperati attraverso un service che fa chiamate HTTP (da mockare). Non è necessario un tema, ma giusto qualche css per farci capire come vengono usati dalla pagina.
+Verranno valutati lo stile di scrittura del codice, le librerie utilizzate, le soluzioni trovate ed eventuali meccanismi per adattare la pagina alla dimensione dello schermo (responsiveness).
