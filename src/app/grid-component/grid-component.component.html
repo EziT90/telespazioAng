@@ -1,1 +1,12 @@
-<p>grid-component works!</p>
+<div class="row">
+  <div class="col-md-12">
+    <p>grid-component works!</p>
+    <ag-grid-angular
+      style="height: 500px; width: 80%;"
+      class="ag-theme-quartz-dark"
+      [rowData]="rowData"
+      [columnDefs]="colDefs"
+      (gridReady)="onGridReady($event)"
+    />
+  </div>
+</div>
