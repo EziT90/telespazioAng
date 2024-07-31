@@ -4,6 +4,8 @@ import 'ag-grid-community/styles/ag-grid.css';
 import 'ag-grid-community/styles/ag-theme-quartz.css';
 import { Component } from '@angular/core';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { isNil } from 'lodash';
+import { CustomButtonComponent } from './custom-grid-component/custom-grid-component.component';
 
 // Row Data Interface
 interface IRow {
@@ -16,6 +18,7 @@ interface IRow {
   price: number;
   successful: boolean;
 }
+
 
 @Component({
   selector: 'app-grid-component',
@@ -38,6 +41,11 @@ export class GridComponentComponent {
     { field: 'price' },
     { field: 'successful' },
     { field: 'rocket' },
+    {
+      field: "actions",
+      headerName: "Actions",
+      cellRenderer: CustomButtonComponent,
+    },
   ];
 
   // Load data into grid when ready
@@ -47,6 +55,8 @@ export class GridComponentComponent {
       .get<any[]>(
         'https://www.ag-grid.com/example-assets/space-mission-data.json'
       )
-      .subscribe((res) => (this.rowData = res));
+      .subscribe((res) => {
+        this.rowData = res
+      });
   }
 }
