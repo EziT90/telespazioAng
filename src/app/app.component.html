@@ -51,9 +51,9 @@
     line-height: 100%;
     letter-spacing: -0.125rem;
     margin: 0;
-    font-family: "Inter Tight", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-      Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
-      "Segoe UI Symbol";
+    font-family: "Inter Tight", -apple-system, BlinkMacSystemFont, "Segoe UI",
+      Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji",
+      "Segoe UI Emoji", "Segoe UI Symbol";
   }
 
   p {
@@ -225,7 +225,12 @@
           <clipPath id="a"><path fill="#fff" d="M0 0h982v239H0z" /></clipPath>
         </defs>
       </svg>
-      <h1><app-header-component [scope]="scope" [header]="headerTitle"></app-header-component></h1>
+      <div class="container-fluid">
+        <app-header-component
+          [scope]="scope"
+          [header]="headerTitle"
+        ></app-header-component>
+      </div>
     </div>
   </div>
 </main>
@@ -237,11 +242,15 @@
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 <!-- * * * * * * * * * * End of Placeholder  * * * * * * * * * * * * -->
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<div class="row" >
-  <app-grid-component style="width: 80%;"></app-grid-component>
+<div class="row">
+  <div class="container-fluid">
+    <app-grid-component style="width: 80%"></app-grid-component>
+  </div>
 </div>
 <div class="row">
-  <app-footer-component></app-footer-component>
+  <div class="container-fluid">
+    <app-footer-component></app-footer-component>
+  </div>
 </div>
 
 <router-outlet />

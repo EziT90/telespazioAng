@@ -1,4 +1,13 @@
-div .footer {
-    display: flex;
-    align-items: center;
+.footer {
+    display: inline;
+    margin-bottom: auto;
+    margin-top: 7%;
+    justify-content:center;
+  }
+
+  .copy {
+    display: inline;
+    margin-bottom: auto;
+    margin-top: 0%;
+    justify-content:center;
   }

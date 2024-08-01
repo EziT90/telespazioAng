@@ -4,7 +4,6 @@ import 'ag-grid-community/styles/ag-grid.css';
 import 'ag-grid-community/styles/ag-theme-quartz.css';
 import { Component } from '@angular/core';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
-import { isNil } from 'lodash';
 import { CustomButtonComponent } from './custom-grid-component/custom-grid-component.component';
 
 // Row Data Interface
@@ -35,12 +34,12 @@ export class GridComponentComponent {
   // Definizione delle colonne.
   colDefs: ColDef[] = [
     { field: 'mission', filter: true },
-    { field: 'company' },
-    { field: 'location' },
-    { field: 'date' },
-    { field: 'price' },
-    { field: 'successful' },
-    { field: 'rocket' },
+    { field: 'company', filter: true },
+    { field: 'location', filter: true },
+    { field: 'date', filter: true },
+    { field: 'price', filter: true },
+    { field: 'successful', filter: true },
+    { field: 'rocket', filter: true },
     {
       field: "actions",
       headerName: "Actions",
